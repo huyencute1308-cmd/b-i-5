@@ -1,13 +1,7 @@
-import mymath
+numbers = list(map(int, input("Nhập các số cách nhau bởi dấu cách: ").split()))
 
-values = [2, 4, 6, 8, 10]
+max_value = max(numbers)
+min_value = min(numbers)
 
-print('Squares:')
-for v in values:
-    print(mymath.square(v))
-
-print('Cubes:')
-for v in values:
-    print(mymath.cube(v))
-
-print('Average:', mymath.average(values))
+print("Phần tử lớn nhất:", max_value)
+print("Phần tử nhỏ nhất:", min_value)
