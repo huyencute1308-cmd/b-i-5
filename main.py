@@ -1,2 +1,15 @@
-Python 3.13.7 (tags/v3.13.7:bcee1c3, Aug 14 2025, 14:15:11) [MSC v.1944 64 bit (AMD64)] on win32
-Enter "help" below or click "Help" above for more information.
+
+import mymath
+
+values = [2, 4, 6, 8, 10]
+
+print('Squares:')
+for v in values:
+    print(mymath.square(v))
+
+print('Cubes:')
+for v in values:
+    print(mymath.cube(v))
+
+print('Average:', mymath.average(values))
+
