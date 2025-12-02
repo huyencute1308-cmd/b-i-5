@@ -1,12 +1,17 @@
-def binary_search(lst, value):
-    lower = 0
-    upper = len(lst) - 1
-    while lower <= upper:
-        mid = (lower + upper) // 2
-        if lst[mid] < value:
-            lower = mid + 1
-        elif lst[mid] > value:
-            upper = mid - 1
-        else:
-            return True
-    return False
+def bubbleSort(nlist):
+    n = len(nlist)
+    for i in range(n - 1):
+        swapped = False
+        for j in range(0, n - i - 1):
+            if nlist[j] > nlist[j + 1]:
+                nlist[j], nlist[j + 1] = nlist[j + 1], nlist[j]
+                swapped = True
+        if not swapped:
+            break
+    return nlist
+
+# Nhập dữ liệu từ bàn phím
+data = list(map(int, input("Nhập danh sách số, cách nhau bởi dấu cách: ").split()))
+sorted_data = bubbleSort(data)
+print("Danh sách sau khi sắp xếp:", sorted_data)
+
